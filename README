@@ -4,7 +4,7 @@ extensions/ folder, then add to the bottom of LocalSettings.php:
   require_once "extensions/Exile/Exile.php";
 
 Then go to [[Special:Exile]] on your wiki and have fun. Requires 
-MediaWiki 1.15.
+MediaWiki 1.15 or higher.
 
 You can customize the default URL to exile users to by editing the page
 [[MediaWiki:Exile-defaulturl]].
