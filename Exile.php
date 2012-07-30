@@ -5,11 +5,11 @@ if (!defined('MEDIAWIKI')) {
 
 $wgExtensionCredits['specialpage'][] = array(
 	'name' => 'Exile',
-	'author' => 'Fran Rogers',
+	'author' => 'Fran McCrory',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:Exile',
 	'description' => 'Allows sysops to exile users to Siberia, for varying definitions of "Siberia."',
 	'descriptionmsg' => 'exile-desc',
-	'version' => '1.1',
+	'version' => '1.2',
 );
  
 $dir = dirname(__FILE__) . '/';
