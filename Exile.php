@@ -69,5 +69,5 @@ function wfGetBlockExiledTo($blockID) {
 	$ts = Block::newFromID($blockID)->mTimestamp;
 	$url = $dbr->selectField('page_props', 'pp_value', "pp_page = 0 AND pp_propname = \"exile-$blockID-$ts\"", 'wfGetBlockExiledTo');
 
-	return $url ? $url : $null;
+	return $url ? $url : null;
 }
