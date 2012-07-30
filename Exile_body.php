@@ -55,7 +55,7 @@ class Exile extends SpecialPage {
 						$exileURL = "http://{$exileURL}";
 					}
 		
-					if ($block->mId && wfExileBlock($block->mId, $exileURL)) {
+					if ($block->getId() && wfExileBlock($block->getId(), $exileURL)) {
 						$log = new LogPage('block');
 						$log->addEntry(($newBlock ? 'block' : 'reblock'), Title::makeTitle(NS_USER, $address),
 									   wfMsg('exile-blockreason', $exileURL),
@@ -89,7 +89,7 @@ class Exile extends SpecialPage {
 			if ($exileUser != '' && ($address || $user)) {
 				$block = Block::newFromDB($address, $user);
 				
-				if ($block && wfUnExileBlock($block->mId)) {
+				if ($block && wfUnExileBlock($block->getId())) {
 					$log = new LogPage('block');
 					$log->addEntry('reblock', Title::makeTitle(NS_USER, $address),
 										   wfMsg('exile-blockrundo', $exileURL),
